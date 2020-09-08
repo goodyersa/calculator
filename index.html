@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Calculadora simples</title>
+    <!-- <script src="js/script.js"></script> -->
+</head>
+
+<body>
+    <div class="numeros">
+        <p>Calcular</p>
+        <input type="text" id="valor1">        
+            <select name="opcao" id="opcao">
+                <option value="somar">soma</option>
+                <option value="divir">divir</option>
+                <option value="subtrair">subtrair</option>
+                <option value="multiplicar">multiplicar</option>
+            </select>                    
+        <input type="text" id="valor2">
+        <button onClick="Calculadora()">=</button>
+        <div class="resultado" id="result"></div>
+    </div>
+</body>
+<script>
+    function Calculadora() {
+
+        const valor1 = document.getElementById("valor1").value
+        const valor2 = document.getElementById("valor2").value 
+        const opcao = document.getElementById("opcao").value        
+        
+        if(opcao == "somar"){            
+            result.innerHTML = parseInt(valor1) + parseInt(valor2)   
+        }else if (opcao == "divir"){            
+            result.innerHTML = parseInt(valor1) / parseInt(valor2)   
+        }else if (opcao == "subtrair"){            
+            result.innerHTML = parseInt(valor1) - parseInt(valor2)   
+        }else if (opcao == "multiplicar"){            
+            result.innerHTML = parseInt(valor1) * parseInt(valor2)   
+        }
+        
+
+    }
+</script>
+
+</html>
